@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pro Store</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>Pro Store</h1>
+    <div>
+        <button id="logoutBtn">Logout</button>
+        <span id="cart-count">Cart: 0</span>
+    </div>
+</header>
+
+<div class="controls">
+
+    <div>
+        <button id="gridViewBtn">Grid</button>
+        <button id="listViewBtn">List</button>
+    </div>
+
+    <select id="categoryFilter"></select>
+
+    <select id="priceFilter">
+        <option value="all">All Prices</option>
+        <option value="0-50">0-50</option>
+        <option value="50-100">50-100</option>
+        <option value="100-1000">100+</option>
+    </select>
+
+    <select id="ratingFilter">
+        <option value="all">All Ratings</option>
+        <option value="4">4+ Stars</option>
+        <option value="3">3+ Stars</option>
+    </select>
+
+    <select id="stockFilter">
+        <option value="all">All Stock</option>
+        <option value="in">In Stock</option>
+    </select>
+
+    <select id="sortSelect">
+        <option value="default">Sort</option>
+        <option value="priceLow">Price Low → High</option>
+        <option value="priceHigh">Price High → Low</option>
+        <option value="rating">Top Rated</option>
+    </select>
+
+</div>
+
+<section id="productGrid" class="grid"></section>
+
+<div class="pagination">
+    <button id="prevBtn">Prev</button>
+    <span id="pageNumber"></span>
+    <button id="nextBtn">Next</button>
+</div>
+
+<section class="cart">
+    <h2>Cart</h2>
+    <div id="cartItems"></div>
+    <h3 id="totalPrice"></h3>
+    <button id="checkoutBtn">Checkout</button>
+</section>
+
+<!-- Product Modal -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span id="closeProductModal">&times;</span>
+        <div id="productDetails"></div>
+    </div>
+</div>
+
+<!-- Payment Modal -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content">
+        <h3>Fake Payment Gateway</h3>
+        <input type="text" placeholder="Card Number">
+        <input type="text" placeholder="Expiry Date">
+        <input type="text" placeholder="CVV">
+        <button id="payBtn">Pay Now</button>
+        <button id="closePayModal">Cancel</button>
+    </div>
+</div>
+
+</body>
+</html>
